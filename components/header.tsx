@@ -66,7 +66,7 @@ export default function Header() {
       isScrolled ? "bg-[#f6eddd] shadow-md" : "bg-transparent"
     )}>
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-        <div className="font-bold text-[#5f6f52] text-xl font-playfair">Project Portfolio</div>
+        <div className="font-bold text-[#5f6f52] text-xl font-playfair ">EduMate</div>
         
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-1">

@@ -17,7 +17,7 @@ export default function Hero() {
     <section id="home" className="min-h-screen flex items-center justify-center py-20">
       <div className="container mx-auto px-4 text-center">
         <h1 className="text-4xl md:text-6xl font-bold text-[#5f6f52] mb-6 font-playfair">
-          Project Portfolio
+          Edu-Mate Project Portfolio
         </h1>
         <p className="text-xl md:text-2xl text-[#5f6f52]/80 mb-8 max-w-2xl mx-auto">
           Showcasing our innovative solutions, talented team, and remarkable achievements
