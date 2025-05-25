@@ -22,8 +22,7 @@ export default function Home() {
         <AboutUs />
         <Achievements />
         <ContactUs />
-        <Documents />
-        <Presentations />
+
         <Footer />
       </div>
     </main>

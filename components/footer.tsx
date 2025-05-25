@@ -46,7 +46,7 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">Resources</h3>
             <ul className="space-y-2">
-              {['About Us', 'Achievements', 'Documents', 'Presentations'].map((item) => (
+              {['About Us', 'Achievements'].map((item) => (
                 <li key={item}>
                   <a 
                     href={`#${item.toLowerCase().replace(/\s+/g, '-')}`} 
