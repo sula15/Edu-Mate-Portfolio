@@ -20,7 +20,7 @@ export default function Footer() {
               className="border-white text-white hover:bg-white/20"
               asChild
             >
-              <a href="https://github.com/your-project" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/sula15/MindMate-Edu.git" target="_blank" rel="noopener noreferrer">
                 <Github className="h-4 w-4 mr-2" />
                 GitHub Repository
               </a>
