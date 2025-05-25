@@ -27,7 +27,7 @@ const teamMembers = [
   },
   {
     name: "Ovindu Gunatunga",
-    role: "Full Stack Developer",
+    role: "Group Member",
     image: "/images/ovindu.jpg",
     bio: "Final Year Undergraduate at SLIIT, specializing in Data Science with focus on Web Development",
     university: "SLIIT",
@@ -41,7 +41,7 @@ const teamMembers = [
   },
   {
     name: "Warthula Dewpura",
-    role: "Backend Developer",
+    role: "Group Member",
     image: "/images/warthula.jpg",
     bio: "Final Year Undergraduate at SLIIT, specializing in Data Science with expertise in System Architecture",
     university: "SLIIT",
@@ -55,7 +55,7 @@ const teamMembers = [
   },
   {
     name: "Sanduni Fernando",
-    role: "UI/UX Designer",
+    role: "Group Member",
     image: "/images/sanduni.jpg",
     bio: "Final Year Undergraduate at SLIIT, specializing in Data Science with passion for User Experience Design",
     university: "SLIIT",
