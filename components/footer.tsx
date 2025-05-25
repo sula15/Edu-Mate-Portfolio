@@ -76,6 +76,10 @@ export default function Footer() {
               Malabe, Sri Lanka
               <br />
               +94 70 214 0856
+              <br />
+              +94 76 194 4580
+              <br /> +94 76 419 0521
+              <br /> +94 77 084 0728
             </p>
           </div>
         </div>

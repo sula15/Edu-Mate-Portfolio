@@ -152,6 +152,9 @@ export default function ContactUs() {
                     <h3 className="font-medium text-[#5f6f52]">Phone</h3>
                     <p className="text-sm text-[#5f6f52]/70 mt-1">
                       +94 70 214 0856
+                      <br /> +94 76 194 4580
+                      <br /> +94 76 419 0521
+                      <br /> +94 77 084 0728
                       <br />
                     </p>
                   </div>
@@ -170,6 +173,11 @@ export default function ContactUs() {
                     <p className="text-sm text-[#5f6f52]/70 mt-1">
                       sulawee@gmail.com
                       <br />
+                      ovindumandith@gmail.com
+                      <br />
+                      it21063596@my.sliit.lk
+                      <br />
+                      it21254420@my.sliit.lk
                     </p>
                   </div>
                 </div>

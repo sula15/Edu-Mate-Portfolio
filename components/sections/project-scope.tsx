@@ -251,7 +251,7 @@ export default function ProjectScope() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
             <div className="space-y-2">
-              <div className="text-2xl font-bold text-[#5f6f52]">300M+</div>
+              <div className="text-2xl font-bold text-[#5f6f52]">30M+</div>
               <div className="text-sm text-[#5f6f52]/70">
                 Students affected by anxiety globally
               </div>

@@ -117,8 +117,8 @@ const presentations = [
   {
     title: "Research Proposal Presentation",
     description: "Initial research proposal and methodology",
-    date: "December 2024",
-    fileSize: "100.08 MB",
+    date: "July 2024",
+    fileSize: "17.6 MB",
     thumbnail: "/images/proposalP.jpg",
     previewUrl:
       "https://drive.google.com/drive/folders/1miG3oFNmsBAilVqHLwWPxCG3gHnkp8wc?usp=sharing",
@@ -129,8 +129,8 @@ const presentations = [
   {
     title: "Progress Presentation 1",
     description: "First progress presentation with initial findings",
-    date: "January 2025",
-    fileSize: "78.74 MB",
+    date: "December 2024",
+    fileSize: "78.7 MB",
     thumbnail: "/images/PP1.jpg",
     previewUrl:
       "https://drive.google.com/drive/folders/1miG3oFNmsBAilVqHLwWPxCG3gHnkp8wc?usp=sharing",
@@ -141,8 +141,8 @@ const presentations = [
   {
     title: "Progress Presentation 2",
     description: "Second progress presentation with updated results",
-    date: "February 2025",
-    fileSize: "128.65 MB",
+    date: "March 2025",
+    fileSize: "128.6 MB",
     thumbnail: "/images/PP2.jpg",
     previewUrl:
       "https://drive.google.com/drive/folders/1miG3oFNmsBAilVqHLwWPxCG3gHnkp8wc?usp=sharing",

@@ -99,7 +99,7 @@ export default function Milestones() {
       id: 9,
       title: "Final Presentation/Defence",
       description: "Project defense and comprehensive system demonstration",
-      status: "current",
+      status: "completed",
       date: "May 2025",
       icon: <Award className="w-5 h-5" />,
     },
