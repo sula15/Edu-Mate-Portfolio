@@ -121,7 +121,7 @@ export default function ProjectScope() {
                 <TabsTrigger
                   key={key}
                   value={key}
-                  className="data-[state=active]:bg-white data-[state=active]:text-[#5f6f52] data-[state=active]:shadow-sm px-4 py-2 text-sm text-[#5f6f52]/80 hover:text-[#5f6f52] hover:bg-white/50 transition-all duration-200"
+                  className="bg-[#f6eddd]/50 text-[#5f6f52] data-[state=active]:bg-white data-[state=active]:text-[#5f6f52] data-[state=active]:shadow-sm px-4 py-2 text-sm transition-all duration-200"
                 >
                   {section.title}
                 </TabsTrigger>

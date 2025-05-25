@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import {
   CheckCircle,
   Circle,
@@ -21,6 +22,8 @@ interface RoadmapItem {
 }
 
 export default function Milestones() {
+  const [visibleItems, setVisibleItems] = useState<number[]>([]);
+
   const roadmapItems: RoadmapItem[] = [
     {
       id: 1,
@@ -63,7 +66,7 @@ export default function Milestones() {
       description:
         "Second milestone review with advanced feature implementations",
       status: "completed",
-      date: "May 2024",
+      date: "March 2025",
       icon: <Presentation className="w-5 h-5" />,
     },
     {
@@ -100,9 +103,37 @@ export default function Milestones() {
       date: "May 2025",
       icon: <Award className="w-5 h-5" />,
     },
-    
-
   ];
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const itemId = parseInt(
+              entry.target.getAttribute("data-item-id") || "0"
+            );
+            setVisibleItems((prev) => {
+              if (!prev.includes(itemId)) {
+                return [...prev, itemId].sort((a, b) => a - b);
+              }
+              return prev;
+            });
+          }
+        });
+      },
+      {
+        threshold: 0.3,
+        rootMargin: "0px 0px -50px 0px",
+      }
+    );
+
+    // Observe all milestone items
+    const milestoneElements = document.querySelectorAll("[data-item-id]");
+    milestoneElements.forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, []);
 
   const getStatusColor = (status: string) => {
     switch (status) {
@@ -123,6 +154,8 @@ export default function Milestones() {
     return "bg-gray-300";
   };
 
+  const isItemVisible = (itemId: number) => visibleItems.includes(itemId);
+
   return (
     <section id="milestones" className="py-20 bg-[#f6eddd]">
       <div className="container mx-auto px-4">
@@ -136,81 +169,130 @@ export default function Milestones() {
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <div className="relative">
-            {/* Vertical line */}
-            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-[#5f6f52]/20"></div>
+            {/* Central vertical line */}
+            <div className="absolute left-1/2 transform -translate-x-1/2 top-0 bottom-0 w-1 bg-[#5f6f52]/20"></div>
 
-            {roadmapItems.map((item, index) => (
-              <div
-                key={item.id}
-                className="relative flex items-start mb-12 last:mb-0"
-              >
-                {/* Timeline dot */}
+            {roadmapItems.map((item, index) => {
+              const isLeft = index % 2 === 0;
+              const isVisible = isItemVisible(item.id);
+
+              return (
                 <div
-                  className={`relative z-10 flex items-center justify-center w-16 h-16 rounded-full border-4 ${getStatusColor(
-                    item.status
-                  )} mr-8 flex-shrink-0`}
+                  key={item.id}
+                  data-item-id={item.id}
+                  className={`relative flex items-center mb-16 last:mb-0 ${
+                    isLeft ? "justify-start" : "justify-end"
+                  }`}
                 >
-                  {item.status === "completed" ? (
-                    <CheckCircle className="w-6 h-6 text-green-600" />
-                  ) : item.status === "current" ? (
-                    <div className="w-3 h-3 bg-[#edb246] rounded-full animate-pulse"></div>
-                  ) : (
-                    <Circle className="w-6 h-6 text-gray-400" />
-                  )}
-                </div>
-
-                {/* Connecting line to next item */}
-                {index < roadmapItems.length - 1 && (
-                  <div
-                    className={`absolute left-8 top-16 w-0.5 h-12 ${getLineColor(
-                      item.status,
-                      roadmapItems[index + 1]?.status
-                    )}`}
-                  ></div>
-                )}
-
-                {/* Content */}
-                <div className="flex-1 min-w-0">
-                  <div className="bg-white rounded-lg shadow-lg border border-[#5f6f52]/10 p-6 hover:shadow-xl transition-shadow duration-300">
-                    <div className="flex items-start justify-between mb-4">
-                      <div className="flex items-center space-x-3">
-                        <div
-                          className={`p-2 rounded-lg ${getStatusColor(
-                            item.status
-                          )}`}
-                        >
-                          {item.icon}
-                        </div>
-                        <div>
-                          <h3 className="text-xl font-semibold text-[#5f6f52] mb-1">
-                            {item.title}
-                          </h3>
-                          <div className="flex items-center space-x-2">
-                            <Calendar className="w-4 h-4 text-[#5f6f52]/60" />
-                            <span className="text-sm text-[#5f6f52]/70">
-                              {item.date}
-                            </span>
+                  {/* Content - positioned left or right */}
+                  <div className={`w-5/12 ${isLeft ? "pr-8" : "pl-8"}`}>
+                    <div
+                      className={`transform transition-all duration-700 ease-out ${
+                        isVisible
+                          ? "translate-x-0 opacity-100"
+                          : isLeft
+                          ? "-translate-x-16 opacity-0"
+                          : "translate-x-16 opacity-0"
+                      }`}
+                      style={{ transitionDelay: `${index * 150}ms` }}
+                    >
+                      <div className="bg-white rounded-lg shadow-lg border border-[#5f6f52]/10 p-6 hover:shadow-xl transition-shadow duration-300">
+                        <div className="flex items-start justify-between mb-4">
+                          <div className="flex items-center space-x-3">
+                            <div
+                              className={`p-2 rounded-lg ${getStatusColor(
+                                item.status
+                              )}`}
+                            >
+                              {item.icon}
+                            </div>
+                            <div>
+                              <h3 className="text-xl font-semibold text-[#5f6f52] mb-1">
+                                {item.title}
+                              </h3>
+                              <div className="flex items-center space-x-2">
+                                <Calendar className="w-4 h-4 text-[#5f6f52]/60" />
+                                <span className="text-sm text-[#5f6f52]/70">
+                                  {item.date}
+                                </span>
+                              </div>
+                            </div>
                           </div>
+                          <span
+                            className={`px-3 py-1 rounded-full text-xs font-medium ${getStatusColor(
+                              item.status
+                            )}`}
+                          >
+                            {item.status.charAt(0).toUpperCase() +
+                              item.status.slice(1)}
+                          </span>
                         </div>
+                        <p className="text-[#5f6f52]/80 leading-relaxed">
+                          {item.description}
+                        </p>
                       </div>
-                      <span
-                        className={`px-3 py-1 rounded-full text-xs font-medium ${getStatusColor(
-                          item.status
-                        )}`}
-                      >
-                        {item.status.charAt(0).toUpperCase() +
-                          item.status.slice(1)}
-                      </span>
                     </div>
-                    <p className="text-[#5f6f52]/80 leading-relaxed">
-                      {item.description}
-                    </p>
                   </div>
+
+                  {/* Central timeline dot */}
+                  <div className="absolute left-1/2 transform -translate-x-1/2 z-10">
+                    <div
+                      className={`flex items-center justify-center w-16 h-16 rounded-full border-4 ${getStatusColor(
+                        item.status
+                      )} transition-all duration-500 ${
+                        isVisible
+                          ? "scale-100 opacity-100"
+                          : "scale-75 opacity-50"
+                      }`}
+                      style={{ transitionDelay: `${index * 150 + 200}ms` }}
+                    >
+                      {item.status === "completed" ? (
+                        <CheckCircle className="w-6 h-6 text-green-600" />
+                      ) : item.status === "current" ? (
+                        <div className="w-3 h-3 bg-[#edb246] rounded-full animate-pulse"></div>
+                      ) : (
+                        <Circle className="w-6 h-6 text-gray-400" />
+                      )}
+                    </div>
+                  </div>
+
+                  {/* Connecting line to next item */}
+                  {index < roadmapItems.length - 1 && (
+                    <div
+                      className={`absolute left-1/2 transform -translate-x-1/2 top-16 w-1 h-16 transition-all duration-500 ${getLineColor(
+                        item.status,
+                        roadmapItems[index + 1]?.status
+                      )} ${
+                        isVisible
+                          ? "scale-y-100 opacity-100"
+                          : "scale-y-0 opacity-50"
+                      }`}
+                      style={{
+                        transitionDelay: `${index * 150 + 400}ms`,
+                        transformOrigin: "top",
+                      }}
+                    ></div>
+                  )}
+
+                  {/* Connection line from dot to content */}
+                  <div
+                    className={`absolute top-8 w-8 h-0.5 bg-[#5f6f52]/30 transition-all duration-500 ${
+                      isLeft ? "left-1/2 ml-8" : "right-1/2 mr-8"
+                    } ${
+                      isVisible
+                        ? "scale-x-100 opacity-100"
+                        : "scale-x-0 opacity-50"
+                    }`}
+                    style={{
+                      transitionDelay: `${index * 150 + 300}ms`,
+                      transformOrigin: isLeft ? "left" : "right",
+                    }}
+                  ></div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
 

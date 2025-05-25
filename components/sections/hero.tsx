@@ -23,7 +23,7 @@ export default function Hero() {
           {/* Text Content */}
           <div className="text-center lg:text-left space-y-6">
             <h1 className="text-4xl md:text-6xl font-bold text-[#5f6f52] mb-6 font-playfair">
-              Edu-Mate Project Portfolio
+              MindMate-Edu Project Portfolio
             </h1>
             <p className="text-xl md:text-2xl text-[#5f6f52]/80 mb-8 max-w-2xl lg:max-w-none">
               Showcasing our innovative solutions, talented team, and remarkable
