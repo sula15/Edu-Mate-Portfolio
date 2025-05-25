@@ -31,7 +31,7 @@ const teamMembers = [
     image: "/images/ovindu.jpg",
     bio: "Final Year Undergraduate at SLIIT, specializing in Data Science with focus on Web Development",
     university: "SLIIT",
-    year: "Final Year",
+    year: "4th Year",
     specialization: "Data Science",
     social: {
       linkedin: "https://www.linkedin.com/in/ovindu-gunatunga/",
@@ -45,7 +45,7 @@ const teamMembers = [
     image: "/images/warthula.jpg",
     bio: "Final Year Undergraduate at SLIIT, specializing in Data Science with expertise in System Architecture",
     university: "SLIIT",
-    year: "Final Year",
+    year: "4th Year",
     specialization: "Data Science",
     social: {
       linkedin: "https://www.linkedin.com/in/warthula-dewpura/",
@@ -59,7 +59,7 @@ const teamMembers = [
     image: "/images/sanduni.jpg",
     bio: "Final Year Undergraduate at SLIIT, specializing in Data Science with passion for User Experience Design",
     university: "SLIIT",
-    year: "Final Year",
+    year: "4th Year",
     specialization: "Data Science",
     social: {
       linkedin: "https://www.linkedin.com/in/sanduni-fernando01/",

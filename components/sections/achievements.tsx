@@ -1,103 +1,171 @@
 "use client";
 
-import { useState } from "react";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Award, BarChart, Users, Zap } from "lucide-react";
-
-const achievements = [
-  {
-    category: "Awards",
-    icon: Award,
-    items: [
-      { title: "Innovation Excellence Award", date: "2024", description: "Recognized for groundbreaking approach in solution design" },
-      { title: "Best UX Design", date: "2023", description: "Awarded for exceptional user experience design" },
-      { title: "Industry Impact Award", date: "2023", description: "Acknowledged for significant contribution to the industry" }
-    ]
-  },
-  {
-    category: "Metrics",
-    icon: BarChart,
-    items: [
-      { title: "99.9% Uptime", date: "2024", description: "Maintained exceptional system reliability" },
-      { title: "50% Performance Improvement", date: "2023", description: "Significant boost in system performance" },
-      { title: "30% Cost Reduction", date: "2023", description: "Achieved substantial cost savings in operations" }
-    ]
-  },
-  {
-    category: "Community",
-    icon: Users,
-    items: [
-      { title: "5,000+ Active Users", date: "2024", description: "Growing community of engaged users" },
-      { title: "20+ Community Events", date: "2023", description: "Hosted numerous events to engage with the community" },
-      { title: "50+ Open Source Contributions", date: "2023", description: "Actively contributing to the open source ecosystem" }
-    ]
-  },
-  {
-    category: "Innovation",
-    icon: Zap,
-    items: [
-      { title: "5 Patent Applications", date: "2024", description: "New technologies developed and patent-pending" },
-      { title: "3 Research Publications", date: "2023", description: "Published research findings in respected journals" },
-      { title: "2 New Technology Frameworks", date: "2023", description: "Created innovative frameworks adopted by the industry" }
-    ]
-  }
-];
+import {
+  Award,
+  Calendar,
+  MapPin,
+  ExternalLink,
+  FileText,
+  CheckCircle,
+} from "lucide-react";
 
 export default function Achievements() {
-  const [activeTab, setActiveTab] = useState("Awards");
-  const ActiveIcon = achievements.find(a => a.category === activeTab)?.icon || Award;
-
   return (
     <section id="achievements" className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#5f6f52] mb-4 font-playfair">Achievements</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-[#5f6f52] mb-4 font-playfair">
+            Research Achievement
+          </h2>
           <p className="text-lg text-[#5f6f52]/70 max-w-2xl mx-auto">
-            Celebrating our successes and milestones
+            Celebrating our contribution to international research in AI and
+            education
           </p>
         </div>
 
         <div className="max-w-4xl mx-auto">
-          <Tabs defaultValue="Awards" onValueChange={setActiveTab}>
-            <div className="flex justify-center mb-12">
-              <TabsList className="grid grid-cols-2 md:grid-cols-4">
-                {achievements.map((achievement) => (
-                  <TabsTrigger 
-                    key={achievement.category} 
-                    value={achievement.category}
-                    className="data-[state=active]:bg-[#5f6f52] data-[state=active]:text-white"
-                  >
-                    {achievement.category}
-                  </TabsTrigger>
-                ))}
-              </TabsList>
-            </div>
-
-            <div className="flex justify-center mb-8">
-              <div className="p-6 rounded-full bg-[#f6eddd]">
-                <ActiveIcon className="h-12 w-12 text-[#edb246]" />
-              </div>
-            </div>
-            
-            {achievements.map((achievement) => (
-              <TabsContent key={achievement.category} value={achievement.category} className="mt-0">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                  {achievement.items.map((item, idx) => (
-                    <Card key={idx} className="border-[#5f6f52]/10 overflow-hidden">
-                      <div className="h-2 bg-[#edb246]"></div>
-                      <CardContent className="pt-6">
-                        <Badge className="bg-[#5f6f52] hover:bg-[#5f6f52]/90 mb-3">{item.date}</Badge>
-                        <h3 className="text-lg font-semibold text-[#5f6f52] mb-2">{item.title}</h3>
-                        <p className="text-sm text-[#5f6f52]/70">{item.description}</p>
-                      </CardContent>
-                    </Card>
-                  ))}
+          {/* Main Achievement Card */}
+          <Card className="border-[#5f6f52]/10 shadow-lg mb-8">
+            <div className="h-3 bg-gradient-to-r from-[#5f6f52] to-[#edb246]"></div>
+            <CardHeader className="text-center pb-4">
+              <div className="flex justify-center mb-4">
+                <div className="p-4 rounded-full bg-[#f6eddd]">
+                  <Award className="h-12 w-12 text-[#edb246]" />
                 </div>
-              </TabsContent>
-            ))}
-          </Tabs>
+              </div>
+              <Badge className="bg-green-100 text-green-800 hover:bg-green-200 mb-4 mx-auto w-fit">
+                <CheckCircle className="h-4 w-4 mr-2" />
+                Paper Accepted
+              </Badge>
+              <CardTitle className="text-2xl text-[#5f6f52] font-playfair mb-2">
+                International Conference Acceptance
+              </CardTitle>
+              <p className="text-[#5f6f52]/70">
+                Our research has been accepted for presentation at ICGAL2025
+              </p>
+            </CardHeader>
+            <CardContent>
+              <div className="bg-[#f6eddd]/30 rounded-lg p-6 mb-6">
+                <div className="flex items-start mb-4">
+                  <FileText className="h-5 w-5 text-[#edb246] mr-3 mt-1 flex-shrink-0" />
+                  <div>
+                    <h3 className="font-semibold text-[#5f6f52] mb-2">
+                      Paper Details
+                    </h3>
+                    <p className="text-[#5f6f52]/80 mb-2">
+                      <strong>Paper ID:</strong> 48
+                    </p>
+                    <p className="text-[#5f6f52]/80 mb-2">
+                      <strong>Title:</strong> Enhancing Information Literacy
+                      through the Use of AI-Driven Tools: A Systematic Review
+                    </p>
+                  </div>
+                </div>
+
+                <div className="prose prose-sm text-[#5f6f52]/80 leading-relaxed">
+                  <p className="mb-4">
+                    <em>
+                      "We are pleased to inform you that your abstract has been
+                      accepted for presentation at the conference. We have
+                      received your paper/abstract submission via EasyChair, and
+                      after a careful and thorough review by our esteemed panel,
+                      we are delighted to confirm its acceptance."
+                    </em>
+                  </p>
+                  <p>
+                    <em>
+                      "Your contribution is highly valued and promises to enrich
+                      the discourse on GenAI literacy at this prestigious
+                      event."
+                    </em>
+                  </p>
+                </div>
+              </div>
+
+              {/* Conference Details */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <Card className="border-[#5f6f52]/10 bg-gradient-to-br from-blue-50 to-transparent">
+                  <CardContent className="p-4">
+                    <div className="flex items-center mb-3">
+                      <Award className="h-5 w-5 text-blue-600 mr-2" />
+                      <h4 className="font-semibold text-[#5f6f52]">
+                        Conference
+                      </h4>
+                    </div>
+                    <p className="text-sm text-[#5f6f52]/80 mb-2">
+                      ICGAL2025 - International Conference and Summer Institute
+                      on GenAI Literacy
+                    </p>
+                    <p className="text-xs text-[#5f6f52]/60">
+                      Multidisciplinary Research and Practice in the Age of
+                      GenAI
+                    </p>
+                  </CardContent>
+                </Card>
+
+                <Card className="border-[#5f6f52]/10 bg-gradient-to-br from-green-50 to-transparent">
+                  <CardContent className="p-4">
+                    <div className="flex items-center mb-3">
+                      <Calendar className="h-5 w-5 text-green-600 mr-2" />
+                      <h4 className="font-semibold text-[#5f6f52]">
+                        Event Dates
+                      </h4>
+                    </div>
+                    <p className="text-sm text-[#5f6f52]/80">
+                      June 10-13, 2025
+                    </p>
+                  </CardContent>
+                </Card>
+
+                <Card className="border-[#5f6f52]/10 bg-gradient-to-br from-purple-50 to-transparent">
+                  <CardContent className="p-4">
+                    <div className="flex items-center mb-3">
+                      <MapPin className="h-5 w-5 text-purple-600 mr-2" />
+                      <h4 className="font-semibold text-[#5f6f52]">Venue</h4>
+                    </div>
+                    <p className="text-sm text-[#5f6f52]/80 mb-1">
+                      Óbuda University, Budapest
+                    </p>
+                    <p className="text-xs text-[#5f6f52]/60">
+                      Bécsi út 96/B, 1034, Hungary
+                    </p>
+                  </CardContent>
+                </Card>
+
+                <Card className="border-[#5f6f52]/10 bg-gradient-to-br from-[#edb246]/10 to-transparent">
+                  <CardContent className="p-4">
+                    <div className="flex items-center mb-3">
+                      <ExternalLink className="h-5 w-5 text-[#edb246] mr-2" />
+                      <h4 className="font-semibold text-[#5f6f52]">Website</h4>
+                    </div>
+                    <a
+                      href="https://www.oxford-i-publishing.com/icgal2025"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm text-[#edb246] hover:text-[#edb246]/80 transition-colors duration-200 underline"
+                    >
+                      www.oxford-i-publishing.com/icgal2025
+                    </a>
+                  </CardContent>
+                </Card>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Impact Statement */}
+          <div className="text-center bg-gradient-to-r from-[#5f6f52]/10 to-[#edb246]/10 rounded-xl p-8">
+            <h3 className="text-xl font-semibold text-[#5f6f52] mb-4 font-playfair">
+              Research Impact
+            </h3>
+            <p className="text-[#5f6f52]/80 max-w-3xl mx-auto">
+              This acceptance represents our commitment to advancing the field
+              of AI-driven educational tools and contributing to the global
+              discourse on GenAI literacy. Our systematic review provides
+              valuable insights for the multidisciplinary research community.
+            </p>
+          </div>
         </div>
       </div>
     </section>

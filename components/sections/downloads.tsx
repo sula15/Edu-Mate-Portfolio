@@ -100,7 +100,7 @@ const documents = [
   },
 
   {
-    title: "RE-TAF Document",
+    title: "TAF Document",
     description: "Research Evaluation and Technical Assessment Framework",
     date: "April 2025",
     fileSize: "1.5 MB",
@@ -117,10 +117,9 @@ const presentations = [
   {
     title: "Research Proposal Presentation",
     description: "Initial research proposal and methodology",
-    date: "December 2024",
-    fileSize: "100.08 MB",
-    thumbnail:
-      "https://images.pexels.com/photos/7688166/pexels-photo-7688166.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    date: "July 2024",
+    fileSize: "17.6 MB",
+    thumbnail: "/images/proposalP.jpg",
     previewUrl:
       "https://drive.google.com/drive/folders/1miG3oFNmsBAilVqHLwWPxCG3gHnkp8wc?usp=sharing",
     downloadUrl:
@@ -130,10 +129,9 @@ const presentations = [
   {
     title: "Progress Presentation 1",
     description: "First progress presentation with initial findings",
-    date: "January 2025",
-    fileSize: "78.74 MB",
-    thumbnail:
-      "https://images.pexels.com/photos/7688168/pexels-photo-7688168.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    date: "December 2024",
+    fileSize: "78.7 MB",
+    thumbnail: "/images/PP1.jpg",
     previewUrl:
       "https://drive.google.com/drive/folders/1miG3oFNmsBAilVqHLwWPxCG3gHnkp8wc?usp=sharing",
     downloadUrl:
@@ -143,10 +141,9 @@ const presentations = [
   {
     title: "Progress Presentation 2",
     description: "Second progress presentation with updated results",
-    date: "February 2025",
-    fileSize: "128.65 MB",
-    thumbnail:
-      "https://images.pexels.com/photos/7688254/pexels-photo-7688254.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    date: "March 2025",
+    fileSize: "128.6 MB",
+    thumbnail: "/images/PP2.jpg",
     previewUrl:
       "https://drive.google.com/drive/folders/1miG3oFNmsBAilVqHLwWPxCG3gHnkp8wc?usp=sharing",
     downloadUrl:
@@ -158,8 +155,7 @@ const presentations = [
     description: "Final project defense with complete findings",
     date: "March 2025",
     fileSize: "18.7 MB",
-    thumbnail:
-      "https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    thumbnail: "/images/PP3.jpg",
     previewUrl:
       "https://drive.google.com/drive/folders/1miG3oFNmsBAilVqHLwWPxCG3gHnkp8wc?usp=sharing", // Add when available
     downloadUrl:

@@ -121,7 +121,7 @@ export default function ProjectScope() {
                 <TabsTrigger
                   key={key}
                   value={key}
-                  className="data-[state=active]:bg-white data-[state=active]:text-[#5f6f52] data-[state=active]:shadow-sm px-4 py-2 text-sm text-[#5f6f52]/80 hover:text-[#5f6f52] hover:bg-white/50 transition-all duration-200"
+                  className="bg-[#f6eddd]/50 text-[#5f6f52] data-[state=active]:bg-white data-[state=active]:text-[#5f6f52] data-[state=active]:shadow-sm px-4 py-2 text-sm transition-all duration-200"
                 >
                   {section.title}
                 </TabsTrigger>
@@ -251,7 +251,7 @@ export default function ProjectScope() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
             <div className="space-y-2">
-              <div className="text-2xl font-bold text-[#5f6f52]">300M+</div>
+              <div className="text-2xl font-bold text-[#5f6f52]">30M+</div>
               <div className="text-sm text-[#5f6f52]/70">
                 Students affected by anxiety globally
               </div>
