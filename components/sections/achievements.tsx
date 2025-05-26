@@ -58,8 +58,8 @@ export default function Achievements() {
                       <strong>Paper ID:</strong> 48
                     </p>
                     <p className="text-[#5f6f52]/80 mb-2">
-                      <strong>Title:</strong> Enhancing Information Literacy
-                      through the Use of AI-Driven Tools: A Systematic Review
+                      <strong>Title:</strong> Beyond CLIP Cost-Effective
+                      Multimodal Retrieval for Education
                     </p>
                   </div>
                 </div>

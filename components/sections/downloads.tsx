@@ -49,9 +49,10 @@ const documents = [
     description: "Machine Learning Operations documentation",
     date: "April 2025",
     fileSize: "1.5 MB",
-    previewUrl: "https://drive.google.com/file/d/YOUR_RETAF_FILE_ID/preview",
+    previewUrl:
+      "https://drive.google.com/drive/folders/1kRCZQnKCIo43zvPPAPV4n0gas9OyznNa?usp=sharing",
     downloadUrl:
-      "https://drive.google.com/uc?export=download&id=YOUR_RETAF_FILE_ID",
+      "https://drive.google.com/drive/folders/1kRCZQnKCIo43zvPPAPV4n0gas9OyznNa?usp=sharing",
     type: "PDF",
   },
   {
