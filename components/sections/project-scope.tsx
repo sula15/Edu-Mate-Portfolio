@@ -251,7 +251,7 @@ export default function ProjectScope() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
             <div className="space-y-2">
-              <div className="text-2xl font-bold text-[#5f6f52]">30M+</div>
+              <div className="text-2xl font-bold text-[#5f6f52]">300M+</div>
               <div className="text-sm text-[#5f6f52]/70">
                 Students affected by anxiety globally
               </div>
@@ -273,6 +273,164 @@ export default function ProjectScope() {
               </div>
             </div>
           </div>
+        </div>
+
+        {/* References Section */}
+        <div className="mt-20">
+          <div className="text-center mb-12">
+            <h3 className="text-2xl font-semibold text-[#5f6f52] mb-4 font-playfair">
+              References
+            </h3>
+            <p className="text-[#5f6f52]/70">
+              Academic sources and research foundations supporting our work
+            </p>
+          </div>
+
+          <Card className="border-[#5f6f52]/10 shadow-lg">
+            <CardHeader>
+              <CardTitle className="text-xl text-[#5f6f52] font-playfair flex items-center">
+                <Book className="h-6 w-6 mr-3 text-[#edb246]" />
+                Research Bibliography
+              </CardTitle>
+              <CardDescription className="text-[#5f6f52]/70">
+                Key academic references and sources utilized in our research
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <div className="space-y-4 text-sm text-[#5f6f52]/80 leading-relaxed">
+                <div className="border-l-4 border-[#edb246]/30 pl-4 py-2 hover:border-[#edb246] transition-colors duration-200">
+                  <p>
+                    <strong>[1]</strong> A. Gocen and F. Aydemir, "Artificial
+                    Intelligence in Education and Schools," Research on
+                    Education and Media, vol. 12, no. 1, pp. 13-21, December
+                    2020.
+                  </p>
+                </div>
+
+                <div className="border-l-4 border-[#edb246]/30 pl-4 py-2 hover:border-[#edb246] transition-colors duration-200">
+                  <p>
+                    <strong>[2]</strong> W. Wang, X. Yang, D. Zhang and Y.
+                    Zhuang, "Effective multi-modal retrieval based on stacked
+                    auto-encoders," Proc. VLDB Endow., vol. 7, no. 8, pp.
+                    649-660, April 2014.
+                  </p>
+                </div>
+
+                <div className="border-l-4 border-[#edb246]/30 pl-4 py-2 hover:border-[#edb246] transition-colors duration-200">
+                  <p>
+                    <strong>[3]</strong> C. Yaras, S. Chen, P. Wang, and Q. Qu,
+                    "Explaining and Mitigating the Modality Gap in Contrastive
+                    Multimodal Learning," December 2024.
+                  </p>
+                </div>
+
+                <div className="border-l-4 border-[#edb246]/30 pl-4 py-2 hover:border-[#edb246] transition-colors duration-200">
+                  <p>
+                    <strong>[4]</strong> R. David, W. Chenwei, F. N. Luis, A. C.
+                    Leo, M. L. Diego and S. A. Cajas, "Multimodal Deep Learning
+                    for Low-Resource Settings: A Vector Embedding Alignment
+                    Approach for Healthcare Applications," vol. abs/2406.02601,
+                    2024.
+                  </p>
+                </div>
+
+                <div className="border-l-4 border-[#edb246]/30 pl-4 py-2 hover:border-[#edb246] transition-colors duration-200">
+                  <p>
+                    <strong>[5]</strong> L. Zehan, Z. Xin, Z. Yanzhao, L.
+                    Dingkun, X. Pengjun and Z. Meishan, "Towards General Text
+                    Embeddings with Multi-stage Contrastive Learning," 2023.
+                  </p>
+                </div>
+
+                <div className="border-l-4 border-[#edb246]/30 pl-4 py-2 hover:border-[#edb246] transition-colors duration-200">
+                  <p>
+                    <strong>[6]</strong> openai, "clip-vit-base-patch32,"
+                    Hugging Face, January 2021. [Online]. Available:{" "}
+                    <a
+                      href="https://huggingface.co/openai/clip-vit-base-patch32"
+                      className="text-[#edb246] hover:underline"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      https://huggingface.co/openai/clip-vit-base-patch32
+                    </a>
+                    .
+                  </p>
+                </div>
+
+                <div className="border-l-4 border-[#edb246]/30 pl-4 py-2 hover:border-[#edb246] transition-colors duration-200">
+                  <p>
+                    <strong>[7]</strong> C. Yin and Z. Zhang, "A Study of
+                    Sentence Similarity Based on the All minilm-l6-v2 Model With
+                    'Same Semantics, Different Structure' After Fine Tuning," in
+                    2nd International Conference on Image, Algorithms and
+                    Artificial Intelligence (ICIAAI 2024), 2024.
+                  </p>
+                </div>
+
+                <div className="border-l-4 border-[#edb246]/30 pl-4 py-2 hover:border-[#edb246] transition-colors duration-200">
+                  <p>
+                    <strong>[8]</strong> L. Wang, N. Yang, X. Huang, B. Jiao, L.
+                    Yang, D. Jiang, R. Majumder and F. Wei, "Text Embeddings by
+                    Weakly-Supervised Contrastive Pre training," 22 February
+                    2024.
+                  </p>
+                </div>
+
+                <div className="border-l-4 border-[#edb246]/30 pl-4 py-2 hover:border-[#edb246] transition-colors duration-200">
+                  <p>
+                    <strong>[9]</strong> E. Sedigheh and d. M. Gerard, "Mitigate
+                    the Gap: Investigating Approaches for Improving Cross-Modal
+                    Alignment in CLIP," ArXiv, 2024.
+                  </p>
+                </div>
+
+                <div className="border-l-4 border-[#edb246]/30 pl-4 py-2 hover:border-[#edb246] transition-colors duration-200">
+                  <p>
+                    <strong>[10]</strong> F. Abrar, M. Alex and F. Alona, "It's
+                    Not a Modality Gap: Characterizing and Addressing the
+                    Contrastive Gap," 2024.
+                  </p>
+                </div>
+
+                <div className="border-l-4 border-[#edb246]/30 pl-4 py-2 hover:border-[#edb246] transition-colors duration-200">
+                  <p>
+                    <strong>[11]</strong> M. P. Luis, S. Addisson and V. Luis,
+                    "A Comparative Analysis of Early and Late Fusion for the
+                    Multimodal Two-Class Problem," IEEE Access, vol. 11, pp.
+                    84283-84300, 2023.
+                  </p>
+                </div>
+
+                <div className="border-l-4 border-[#edb246]/30 pl-4 py-2 hover:border-[#edb246] transition-colors duration-200">
+                  <p>
+                    <strong>[12]</strong> A. Andre, Y. Mengyuan and G. Bernd,
+                    "Large-Scale Query-by-Image Video Retrieval Using Bloom
+                    Filters," arXiv:1604.07939, 2016.
+                  </p>
+                </div>
+
+                <div className="border-l-4 border-[#edb246]/30 pl-4 py-2 hover:border-[#edb246] transition-colors duration-200">
+                  <p>
+                    <strong>[13]</strong> C. Galli, N. Donos and E. Calciolari,
+                    "Performance of 4 Pre-Trained Sentence Transformer Models in
+                    the Semantic Query of a Systematic Review Dataset on
+                    Peri-Implantitis," vol. 15, no. 68, 2024.
+                  </p>
+                </div>
+
+                <div className="border-l-4 border-[#edb246]/30 pl-4 py-2 hover:border-[#edb246] transition-colors duration-200">
+                  <p>
+                    <strong>[14]</strong> M. T. Colangelo, M. Meleti, S.
+                    Guizzardi, E. Calciolari and C. Galli, "A Comparative
+                    Analysis of Sentence Transformer Models for Automated
+                    Journal Recommendation Using PubMed Metadata," 17 January
+                    2025.
+                  </p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </div>
     </section>
